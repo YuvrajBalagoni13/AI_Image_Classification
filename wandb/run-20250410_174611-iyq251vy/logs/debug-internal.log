@@ -1,0 +1,19 @@
+{"time":"2025-04-10T17:46:11.5380501+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"c:\\Users\\YUVRAJ\\ML\\Projects_end-to-end\\AI_image_classifier\\wandb\\run-20250410_174611-iyq251vy\\logs\\debug-core.log"}
+{"time":"2025-04-10T17:46:14.6577376+05:30","level":"INFO","msg":"created new stream","id":"iyq251vy"}
+{"time":"2025-04-10T17:46:14.6577376+05:30","level":"INFO","msg":"sender: started","stream_id":"iyq251vy"}
+{"time":"2025-04-10T17:46:14.6577376+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"iyq251vy"}
+{"time":"2025-04-10T17:46:14.6577376+05:30","level":"INFO","msg":"handler: started","stream_id":"iyq251vy"}
+{"time":"2025-04-10T17:46:14.6582693+05:30","level":"INFO","msg":"stream: started","id":"iyq251vy"}
+{"time":"2025-04-10T17:46:15.0764137+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-10T17:56:53.4884223+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/yuvrajbalagoni-indian-institute-of-technology-dhanbad/AI_Image_Classification/iyq251vy/file_stream\": dial tcp 35.186.228.49:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-04-10T18:23:33.3362806+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 172.22.120.206:50390->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-04-10T18:55:17.536558+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-10T18:55:17.5391673+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-10T18:55:18.6314149+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact 50_0.01-0.001_10_subs_2_last_2_layer_unfreeze","runtime_seconds":1.1553118},{"desc":"uploading wandb-summary.json","runtime_seconds":0.0550828},{"desc":"uploading output.log","runtime_seconds":0.0524406}],"total_operations":3}}
+{"time":"2025-04-10T18:56:19.3161532+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact 50_0.01-0.001_10_subs_2_last_2_layer_unfreeze","runtime_seconds":61.8400501,"subtasks":[{"desc":"efficientnetb0.onnx","runtime_seconds":60.1204171,"progress":"11.1MB/15.3MB"}]}],"total_operations":1}}
+{"time":"2025-04-10T18:56:34.9176889+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-10T18:56:35.6335425+05:30","level":"INFO","msg":"stream: closing","id":"iyq251vy"}
+{"time":"2025-04-10T18:56:35.6335425+05:30","level":"INFO","msg":"handler: closed","stream_id":"iyq251vy"}
+{"time":"2025-04-10T18:56:35.6335425+05:30","level":"INFO","msg":"sender: closed","stream_id":"iyq251vy"}
+{"time":"2025-04-10T18:56:35.6335425+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"iyq251vy"}
+{"time":"2025-04-10T18:56:35.6340802+05:30","level":"INFO","msg":"stream: closed","id":"iyq251vy"}

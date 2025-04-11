@@ -1,0 +1,16 @@
+{"time":"2025-04-10T03:46:52.8612223+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"c:\\Users\\YUVRAJ\\ML\\Projects_end-to-end\\AI_image_classifier\\wandb\\run-20250410_034652-8q85tbm0\\logs\\debug-core.log"}
+{"time":"2025-04-10T03:46:54.5717232+05:30","level":"INFO","msg":"created new stream","id":"8q85tbm0"}
+{"time":"2025-04-10T03:46:54.5717232+05:30","level":"INFO","msg":"handler: started","stream_id":"8q85tbm0"}
+{"time":"2025-04-10T03:46:54.5722614+05:30","level":"INFO","msg":"stream: started","id":"8q85tbm0"}
+{"time":"2025-04-10T03:46:54.5722614+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"8q85tbm0"}
+{"time":"2025-04-10T03:46:54.5722614+05:30","level":"INFO","msg":"sender: started","stream_id":"8q85tbm0"}
+{"time":"2025-04-10T03:46:54.9806784+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-10T03:52:28.6269684+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-10T03:52:28.6280304+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-10T03:52:29.6796949+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.2561003,"progress":"746B/746B"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.2555784,"progress":"26B/26B"}],"total_operations":2}}
+{"time":"2025-04-10T03:52:31.2528548+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-10T03:52:31.7879874+05:30","level":"INFO","msg":"stream: closing","id":"8q85tbm0"}
+{"time":"2025-04-10T03:52:31.7879874+05:30","level":"INFO","msg":"handler: closed","stream_id":"8q85tbm0"}
+{"time":"2025-04-10T03:52:31.7885384+05:30","level":"INFO","msg":"sender: closed","stream_id":"8q85tbm0"}
+{"time":"2025-04-10T03:52:31.7885384+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"8q85tbm0"}
+{"time":"2025-04-10T03:52:31.7885384+05:30","level":"INFO","msg":"stream: closed","id":"8q85tbm0"}

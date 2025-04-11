@@ -1,0 +1,16 @@
+{"time":"2025-04-09T23:18:38.3149399+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"c:\\Users\\YUVRAJ\\ML\\Projects_end-to-end\\AI_image_classifier\\wandb\\run-20250409_231838-dkpdel3z\\logs\\debug-core.log"}
+{"time":"2025-04-09T23:18:40.8183159+05:30","level":"INFO","msg":"created new stream","id":"dkpdel3z"}
+{"time":"2025-04-09T23:18:40.8185847+05:30","level":"INFO","msg":"handler: started","stream_id":"dkpdel3z"}
+{"time":"2025-04-09T23:18:40.8185847+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"dkpdel3z"}
+{"time":"2025-04-09T23:18:40.8185847+05:30","level":"INFO","msg":"stream: started","id":"dkpdel3z"}
+{"time":"2025-04-09T23:18:40.8185847+05:30","level":"INFO","msg":"sender: started","stream_id":"dkpdel3z"}
+{"time":"2025-04-09T23:18:41.2724991+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-09T23:49:44.1438957+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-09T23:49:44.1471671+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-09T23:49:45.1845512+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact trained-model-01","runtime_seconds":1.0438721},{"desc":"uploading output.log","runtime_seconds":0.1537694},{"desc":"uploading wandb-summary.json","runtime_seconds":0.1521959}],"total_operations":3}}
+{"time":"2025-04-09T23:50:36.1625356+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-09T23:50:36.697492+05:30","level":"INFO","msg":"stream: closing","id":"dkpdel3z"}
+{"time":"2025-04-09T23:50:36.697492+05:30","level":"INFO","msg":"handler: closed","stream_id":"dkpdel3z"}
+{"time":"2025-04-09T23:50:36.697492+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"dkpdel3z"}
+{"time":"2025-04-09T23:50:36.6981669+05:30","level":"INFO","msg":"sender: closed","stream_id":"dkpdel3z"}
+{"time":"2025-04-09T23:50:36.6981669+05:30","level":"INFO","msg":"stream: closed","id":"dkpdel3z"}

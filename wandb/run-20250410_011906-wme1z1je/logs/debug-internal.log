@@ -1,0 +1,16 @@
+{"time":"2025-04-10T01:19:06.6236035+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"c:\\Users\\YUVRAJ\\ML\\Projects_end-to-end\\AI_image_classifier\\wandb\\run-20250410_011906-wme1z1je\\logs\\debug-core.log"}
+{"time":"2025-04-10T01:19:07.214036+05:30","level":"INFO","msg":"created new stream","id":"wme1z1je"}
+{"time":"2025-04-10T01:19:07.214036+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"wme1z1je"}
+{"time":"2025-04-10T01:19:07.214036+05:30","level":"INFO","msg":"stream: started","id":"wme1z1je"}
+{"time":"2025-04-10T01:19:07.214036+05:30","level":"INFO","msg":"sender: started","stream_id":"wme1z1je"}
+{"time":"2025-04-10T01:19:07.214036+05:30","level":"INFO","msg":"handler: started","stream_id":"wme1z1je"}
+{"time":"2025-04-10T01:19:07.6392262+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-10T01:49:49.2197961+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-10T01:49:49.2197961+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-10T01:49:50.2640626+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact 50_0.01-0.001_10_NoAug_last_1__layer_unfreeze","runtime_seconds":1.0714934},{"desc":"uploading output.log","runtime_seconds":0.2702952,"progress":"1.2KB/1.2KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.2702952,"progress":"242B/242B"}],"total_operations":3}}
+{"time":"2025-04-10T01:50:10.3919147+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-10T01:50:10.9245293+05:30","level":"INFO","msg":"stream: closing","id":"wme1z1je"}
+{"time":"2025-04-10T01:50:10.9245293+05:30","level":"INFO","msg":"handler: closed","stream_id":"wme1z1je"}
+{"time":"2025-04-10T01:50:10.9245293+05:30","level":"INFO","msg":"sender: closed","stream_id":"wme1z1je"}
+{"time":"2025-04-10T01:50:10.9245293+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"wme1z1je"}
+{"time":"2025-04-10T01:50:10.9250449+05:30","level":"INFO","msg":"stream: closed","id":"wme1z1je"}

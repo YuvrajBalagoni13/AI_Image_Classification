@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "C:\Users\YUVRAJ\AppData\Local\Temp\ipykernel_2012\2975551950.py", line 12, in <module>
+    lr= run.config["learning_rate"])
+        ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\YUVRAJ\ML\Projects_end-to-end\AI_image_classifier\venv\Lib\site-packages\wandb\sdk\wandb_config.py", line 130, in __getitem__
+    return self._items[key]
+           ~~~~~~~~~~~^^^^^
+KeyError: 'learning_rate'
+[34m[1mwandb[0m: [32m[41mERROR[0m The nbformat package was not found. It is required to save notebook history.

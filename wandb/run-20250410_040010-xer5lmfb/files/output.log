@@ -1,0 +1,43 @@
+ 70%|███████   | 7/10 [39:50<17:00, 340.17s/it]
+Epoch 1/10: train loss: 0.5726 |
+train accuracy: 0.7494 |
+test loss: 0.4674 |
+test accuracy: 0.8010
+Epoch 2/10: train loss: 0.5730 |
+train accuracy: 0.7582 |
+test loss: 0.5979 |
+test accuracy: 0.7710
+Epoch 3/10: train loss: 0.4927 |
+train accuracy: 0.7976 |
+test loss: 0.4470 |
+test accuracy: 0.8300
+Epoch 4/10: train loss: 0.5004 |
+train accuracy: 0.7946 |
+test loss: 0.3571 |
+test accuracy: 0.8560
+Epoch 5/10: train loss: 0.4825 |
+train accuracy: 0.8020 |
+test loss: 0.3654 |
+test accuracy: 0.8410
+Epoch 6/10: train loss: 0.4444 |
+train accuracy: 0.8124 |
+test loss: 0.6811 |
+test accuracy: 0.7670
+Epoch 7/10: train loss: 0.4549 |
+train accuracy: 0.8180 |
+test loss: 0.3594 |
+test accuracy: 0.8560
+Epoch 8/10: train loss: 0.4321 |
+train accuracy: 0.8208 |
+test loss: 0.5756 |
+test accuracy: 0.7770
+Epoch 9/10: train loss: 0.4261 |
+train accuracy: 0.8204 |
+test loss: 0.3738 |
+test accuracy: 0.8520
+Epoch 10/10: train loss: 0.4361 |
+train accuracy: 0.8220 |
+test loss: 0.3760 |
+test accuracy: 0.8630
+Model training completed.
+[34m[1mwandb[0m: [32m[41mERROR[0m The nbformat package was not found. It is required to save notebook history.

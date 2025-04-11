@@ -1,0 +1,62 @@
+ 70%|███████   | 7/10 [23:41<08:08, 162.92s/it]
+Epoch 1/10: train loss: 3.2030 |
+train accuracy: 0.6916 |
+test loss: 2.6132 |
+test accuracy: 0.7140
+Epoch 2/10: train loss: 4.0866 |
+train accuracy: 0.6896 |
+test loss: 2.8756 |
+test accuracy: 0.7580
+Epoch 3/10: train loss: 4.6050 |
+train accuracy: 0.7016 |
+test loss: 2.5895 |
+test accuracy: 0.7560
+Epoch 4/10: train loss: 3.6692 |
+train accuracy: 0.7228 |
+test loss: 2.9778 |
+test accuracy: 0.7460
+Epoch 5/10: train loss: 4.2913 |
+train accuracy: 0.7212 |
+test loss: 3.4111 |
+test accuracy: 0.7580
+Epoch 6/10: train loss: 4.9240 |
+train accuracy: 0.7032 |
+test loss: 4.1713 |
+test accuracy: 0.7400
+Epoch 7/10: train loss: 5.0060 |
+train accuracy: 0.7076 |
+test loss: 3.0541 |
+test accuracy: 0.7800
+Epoch 8/10: train loss: 4.7180 |
+train accuracy: 0.7108 |
+test loss: 3.0136 |
+test accuracy: 0.7660
+Epoch 9/10: train loss: 4.2947 |
+train accuracy: 0.7216 |
+test loss: 3.2330 |
+test accuracy: 0.7580
+Epoch 10/10: train loss: 5.1393 |
+train accuracy: 0.6964 |
+test loss: 4.9120 |
+test accuracy: 0.7280
+Traceback (most recent call last):
+  File "C:\Users\YUVRAJ\AppData\Local\Temp\ipykernel_2012\787172182.py", line 93, in <module>
+    run.save("efficientnetb0.onnx")
+  File "c:\Users\YUVRAJ\ML\Projects_end-to-end\AI_image_classifier\venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 387, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\YUVRAJ\ML\Projects_end-to-end\AI_image_classifier\venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 435, in wrapper_fn
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\YUVRAJ\ML\Projects_end-to-end\AI_image_classifier\venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\YUVRAJ\ML\Projects_end-to-end\AI_image_classifier\venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 2049, in save
+    return self._save(
+           ^^^^^^^^^^^
+  File "c:\Users\YUVRAJ\ML\Projects_end-to-end\AI_image_classifier\venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 2108, in _save
+    target_path.symlink_to(source_path)
+  File "C:\Users\YUVRAJ\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1386, in symlink_to
+    os.symlink(target, self, target_is_directory)
+OSError: [WinError 1314] A required privilege is not held by the client: 'c:\\Users\\YUVRAJ\\ML\\Projects_end-to-end\\AI_image_classifier\\efficientnetb0.onnx' -> 'c:\\Users\\YUVRAJ\\ML\\Projects_end-to-end\\AI_image_classifier\\wandb\\run-20250409_222406-7177dpjj\\files\\efficientnetb0.onnx'
+[34m[1mwandb[0m: [32m[41mERROR[0m The nbformat package was not found. It is required to save notebook history.

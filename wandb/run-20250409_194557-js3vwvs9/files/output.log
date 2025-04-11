@@ -1,0 +1,48 @@
+ 70%|███████   | 7/10 [20:35<08:02, 161.00s/it]
+Epoch 1/10: train loss: 0.6630 |
+train accuracy: 0.7088 |
+test loss: 0.5126 |
+test accuracy: 0.7600
+Epoch 2/10: train loss: 0.6508 |
+train accuracy: 0.7332 |
+test loss: 0.5471 |
+test accuracy: 0.7640
+Epoch 3/10: train loss: 0.6522 |
+train accuracy: 0.7312 |
+test loss: 0.5125 |
+test accuracy: 0.7840
+Epoch 4/10: train loss: 0.6328 |
+train accuracy: 0.7408 |
+test loss: 0.8732 |
+test accuracy: 0.7040
+Epoch 5/10: train loss: 0.7096 |
+train accuracy: 0.7268 |
+test loss: 0.5727 |
+test accuracy: 0.7580
+Epoch 6/10: train loss: 0.6620 |
+train accuracy: 0.7380 |
+test loss: 0.7578 |
+test accuracy: 0.7040
+Epoch 7/10: train loss: 0.6856 |
+train accuracy: 0.7316 |
+test loss: 0.5541 |
+test accuracy: 0.7820
+Epoch 8/10: train loss: 0.6816 |
+train accuracy: 0.7340 |
+test loss: 0.6893 |
+test accuracy: 0.7220
+Epoch 9/10: train loss: 0.7288 |
+train accuracy: 0.7200 |
+test loss: 0.5661 |
+test accuracy: 0.7760
+Epoch 10/10: train loss: 0.6853 |
+train accuracy: 0.7320 |
+test loss: 0.5669 |
+test accuracy: 0.7580
+Traceback (most recent call last):
+  File "C:\Users\YUVRAJ\AppData\Local\Temp\ipykernel_2012\3406299565.py", line 94, in <module>
+    efficientb0_model.save("efficientnetb0.onnx")
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\YUVRAJ\ML\Projects_end-to-end\AI_image_classifier\venv\Lib\site-packages\torch\nn\modules\module.py", line 1928, in __getattr__
+    raise AttributeError(
+AttributeError: 'EfficientNet' object has no attribute 'save'

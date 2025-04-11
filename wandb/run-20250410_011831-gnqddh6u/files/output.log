@@ -1,0 +1,7 @@
+  0%|          | 0/10 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "C:\Users\YUVRAJ\AppData\Local\Temp\ipykernel_2012\1472839911.py", line 36, in <module>
+    train_loss, train_acc, y_train_actual, y_train_predicted = engine.train_loop(model= efficientb0_model,
+                                                               ^^^^^^
+NameError: name 'engine' is not defined
+[34m[1mwandb[0m: [32m[41mERROR[0m The nbformat package was not found. It is required to save notebook history.

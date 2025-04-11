@@ -1,0 +1,27 @@
+{
+  "os": "Windows-11-10.0.22631-SP0",
+  "python": "CPython 3.12.1",
+  "startedAt": "2025-04-10T17:54:34.939270Z",
+  "program": "c:\\Users\\YUVRAJ\\ML\\Projects_end-to-end\\AI_image_classifier\\testing.ipynb",
+  "codePath": "testing.ipynb",
+  "email": "yuvrajbalagoni@gmail.com",
+  "root": "c:\\Users\\YUVRAJ\\ML\\Projects_end-to-end\\AI_image_classifier",
+  "host": "DESKTOP-UI3KAFU",
+  "executable": "c:\\Users\\YUVRAJ\\ML\\Projects_end-to-end\\AI_image_classifier\\venv\\Scripts\\python.exe",
+  "codePathLocal": "testing.ipynb",
+  "cpu_count": 6,
+  "cpu_count_logical": 12,
+  "disk": {
+    "/": {
+      "total": "492687060992",
+      "used": "453326204928"
+    }
+  },
+  "memory": {
+    "total": "7893946368"
+  },
+  "cpu": {
+    "count": 6,
+    "countLogical": 12
+  }
+}

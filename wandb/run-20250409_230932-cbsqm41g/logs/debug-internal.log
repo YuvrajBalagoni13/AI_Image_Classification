@@ -1,0 +1,16 @@
+{"time":"2025-04-09T23:09:32.852416+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"c:\\Users\\YUVRAJ\\ML\\Projects_end-to-end\\AI_image_classifier\\wandb\\run-20250409_230932-cbsqm41g\\logs\\debug-core.log"}
+{"time":"2025-04-09T23:09:33.4412471+05:30","level":"INFO","msg":"created new stream","id":"cbsqm41g"}
+{"time":"2025-04-09T23:09:33.4417842+05:30","level":"INFO","msg":"stream: started","id":"cbsqm41g"}
+{"time":"2025-04-09T23:09:33.4417842+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"cbsqm41g"}
+{"time":"2025-04-09T23:09:33.4417842+05:30","level":"INFO","msg":"sender: started","stream_id":"cbsqm41g"}
+{"time":"2025-04-09T23:09:33.4417842+05:30","level":"INFO","msg":"handler: started","stream_id":"cbsqm41g"}
+{"time":"2025-04-09T23:09:33.9177094+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-09T23:09:34.2513105+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-09T23:09:34.2513105+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-09T23:09:35.2680524+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading requirements.txt","runtime_seconds":0.6541323,"progress":"1.6KB/1.6KB"},{"desc":"uploading wandb-metadata.json","runtime_seconds":0.3493154,"progress":"771B/771B"},{"desc":"uploading data","runtime_seconds":0.3493154},{"desc":"updating run config","runtime_seconds":0.3178076}],"total_operations":4}}
+{"time":"2025-04-09T23:09:36.7056989+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-09T23:09:37.2285683+05:30","level":"INFO","msg":"stream: closing","id":"cbsqm41g"}
+{"time":"2025-04-09T23:09:37.2285683+05:30","level":"INFO","msg":"handler: closed","stream_id":"cbsqm41g"}
+{"time":"2025-04-09T23:09:37.2285683+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"cbsqm41g"}
+{"time":"2025-04-09T23:09:37.2285683+05:30","level":"INFO","msg":"sender: closed","stream_id":"cbsqm41g"}
+{"time":"2025-04-09T23:09:37.2285683+05:30","level":"INFO","msg":"stream: closed","id":"cbsqm41g"}

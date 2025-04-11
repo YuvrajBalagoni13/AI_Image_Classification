@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\YUVRAJ\AppData\Local\Temp\ipykernel_2012\3331519148.py", line 10, in <module>
+    run.config.learning_rate = learning
+                               ^^^^^^^^
+NameError: name 'learning' is not defined. Did you mean: 'Warning'?
+[34m[1mwandb[0m: [32m[41mERROR[0m The nbformat package was not found. It is required to save notebook history.
