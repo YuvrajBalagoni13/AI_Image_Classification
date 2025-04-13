@@ -1,4 +1,7 @@
 venv/
 data/
-
 wandb/
+wandb-debug.log
+artifacts/
+logs/
+cifake-real-and-ai-generated-synthetic-images/
