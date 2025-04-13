@@ -6,6 +6,18 @@ import onnx
 from tqdm.auto import tqdm
 from pathlib import Path
 
+train_aug = "No_Augmentation"
+test_aug = "No_Augmentation"
+batch_size = 50
+percentage_data = 10
+learning_rate_classifier = 0.01
+learning_rate_unfreeze = 0.001
+model_weights = "EfficientNet_B0_Weights"
+model_name = "efficientnet_b0"
+unfreeze_layers = 5
+num_classes = 2
+layer_name = "classifier"
+epochs = 5
 
 data_URL = "https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images"
 train_dir, test_dir = download_data.download_data(data_URL)
@@ -13,18 +25,6 @@ train_dir, test_dir = download_data.download_data(data_URL)
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 with wandb.init(project= "AI_Image_Classification", settings=wandb.Settings(symlink=False)) as run:
-    train_aug = "No_Augmentation"
-    test_aug = "No_Augmentation"
-    batch_size = 50
-    percentage_data = 10
-    learning_rate_classifier = 0.01
-    learning_rate_unfreeze = 0.001
-    model_weights = "EfficientNet_B0_Weights"
-    model_name = "efficientnet_b0"
-    unfreeze_layers = 5
-    num_classes = 2
-    layer_name = "classifier"
-    epochs = 5
 
     run.config.learning_rate = learning_rate_classifier
     run.config.learning_rate_unfrozenlayer = learning_rate_unfreeze
