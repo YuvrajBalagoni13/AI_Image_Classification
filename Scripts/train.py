@@ -46,7 +46,7 @@ with wandb.init(project= "AI_Image_Classification", settings=wandb.Settings(syml
                                     model_name= model_name,
                                     unfreeze_layers= unfreeze_layers,
                                     num_classes= num_classes,
-                                    layer_name= layer_name).to(device)
+                                    layer_name= layer_name)
     
     loss_fn, optimizer = utils.create_loss_and_optim(CNN_model,
                                                      unfreeze_layers,

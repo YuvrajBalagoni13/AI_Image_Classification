@@ -57,10 +57,10 @@ def model_builder(model_weights: str,
         layer_name: str = None,
         device: str = "cpu") -> torch.nn.Module:
     
-    model_weights = getattr(torchvision.models, model_weights).DEFAULT.to(device)
+    model_weights = getattr(torchvision.models, model_weights).DEFAULT
     model_class = getattr(torchvision.models, model_name)
 
-    model = model_class(weights= model_weights).to(device)
+    model = model_class(weights= model_weights)
 
     model = unfreeze_last_n_layers(model= model,
                            n = unfreeze_layers)
@@ -68,5 +68,7 @@ def model_builder(model_weights: str,
     modified_model = replace_classifier(model= model,
                                         num_classes= num_classes,
                                         layer_name= layer_name)
+    
+    modified_model = modified_model.to(device)
     
     return modified_model
