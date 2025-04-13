@@ -4,6 +4,7 @@ import datapreprocess, download_data, engine, model, utils
 import wandb
 import onnx
 from tqdm.auto import tqdm
+from pathlib import Path
 
 
 data_URL = "https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images"
@@ -15,15 +16,15 @@ with wandb.init(project= "AI_Image_Classification", settings=wandb.Settings(syml
     train_aug = "No_Augmentation"
     test_aug = "No_Augmentation"
     batch_size = 50
-    percentage_data = 5
+    percentage_data = 10
     learning_rate_classifier = 0.01
     learning_rate_unfreeze = 0.001
     model_weights = "EfficientNet_B0_Weights"
     model_name = "efficientnet_b0"
-    unfreeze_layers = 3
+    unfreeze_layers = 5
     num_classes = 2
     layer_name = "classifier"
-    epochs = 10
+    epochs = 5
 
     run.config.learning_rate = learning_rate_classifier
     run.config.learning_rate_unfrozenlayer = learning_rate_unfreeze
@@ -86,13 +87,17 @@ with wandb.init(project= "AI_Image_Classification", settings=wandb.Settings(syml
 
         print(f"Epoch {epoch + 1}/{epochs}: train loss: {train_loss:.4f} |\ntrain accuracy: {train_acc:.4f} |\ntest loss: {test_loss:.4f} |\ntest accuracy: {test_acc:.4f}")
 
+        model_path = Path("Models/")
+        if model_path.is_dir() == False :
+            model_path.mkdir()
+
         torch.onnx.export(
             CNN_model,
             torch.randn(1,3,224,224),
-            "model.onnx",
+            "Models/model.onnx",
             input_names = ["input"],
             output_names = ["output"],
         )
 
-    run.log_artifact("model.onnx", type= "model")
+    run.log_artifact("Models/model.onnx", type= "model")
     print("Model training completed.")
