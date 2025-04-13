@@ -93,7 +93,7 @@ with wandb.init(project= "AI_Image_Classification", settings=wandb.Settings(syml
 
         torch.onnx.export(
             CNN_model,
-            torch.randn(1,3,224,224),
+            torch.randn(1,3,224,224, device = device),
             "Models/model.onnx",
             input_names = ["input"],
             output_names = ["output"],
