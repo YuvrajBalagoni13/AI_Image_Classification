@@ -57,7 +57,7 @@ def model_builder(model_weights: str,
         layer_name: str = None,
         device: str = "cpu") -> torch.nn.Module:
     
-    model_weights = getattr(torchvision.models, model_weights).DEFAULT
+    model_weights = getattr(torchvision.models, model_weights).DEFAULT.to(device)
     model_class = getattr(torchvision.models, model_name)
 
     model = model_class(weights= model_weights).to(device)
