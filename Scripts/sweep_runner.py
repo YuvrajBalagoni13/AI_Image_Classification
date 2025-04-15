@@ -2,8 +2,8 @@ import wandb
 
 sweep_config = {
     "method": "random",
-    "metrics": {"name": "train_loss",
-                "goal": "minimize"},
+    "metrics": {"name": "train_acc",
+                "goal": "maximize"},
     "parameters": {
         "train_aug": {
             "values": ["No_Augmentation", "Gaussian_Blur"]
@@ -27,7 +27,7 @@ sweep_config = {
             "values": [3, 5, 7]
         },
         "epochs": {
-            "values": [2, 5, 10, 15]
+            "values": [5, 10, 15]
         }
     }
 }
@@ -38,4 +38,4 @@ def train():
     import train
     train.main()
 
-wandb.agent(sweep_id = sweep_id, function = train())
+wandb.agent(sweep_id = sweep_id, function = train)
