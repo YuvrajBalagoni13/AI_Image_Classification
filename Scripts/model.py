@@ -21,7 +21,7 @@ def replace_classifier(model : torch.nn.Module,
                        layer_name : str = None) -> torch.nn.Module:
     
     if not layer_name:
-        for candidate in ["classifier", "fc", "head"]:
+        for candidate in ["classifier", "fc", "heads"]:
             if hasattr(model, candidate):
                 layer_name = candidate
                 break
