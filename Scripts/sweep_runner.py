@@ -35,7 +35,7 @@ sweep_config = {
 sweep_id = wandb.sweep(sweep_config, project= "AI_Image_Classification")
 
 def train():
-    import train
-    train.main()
+    import sweep_train
+    sweep_train.main()
 
 wandb.agent(sweep_id = sweep_id, function = train)
