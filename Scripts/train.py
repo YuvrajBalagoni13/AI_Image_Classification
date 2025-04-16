@@ -93,6 +93,7 @@ for epoch in tqdm(range(config.epochs)):
         CNN_model,
         torch.randn(1,3,224,224, device = device),
         "Models/model.onnx",
+        opset_version= 18,
         input_names = ["input"],
         output_names = ["output"],
     )
