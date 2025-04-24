@@ -2,7 +2,7 @@ import wandb
 
 sweep_config = {
     "method": "bayes",
-    "metrics": {"name": "train_acc",
+    "metric": {"name": "test_acc",
                 "goal": "maximize"},
     "parameters": {
         "train_aug": {
