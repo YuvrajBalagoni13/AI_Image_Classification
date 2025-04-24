@@ -1,7 +1,7 @@
 import wandb
 
 sweep_config = {
-    "method": "random",
+    "method": "bayes",
     "metrics": {"name": "train_acc",
                 "goal": "maximize"},
     "parameters": {
@@ -27,7 +27,7 @@ sweep_config = {
             "values": [3, 5, 7]
         },
         "epochs": {
-            "values": [5, 10, 15]
+            "values": [10]
         }
     }
 }
