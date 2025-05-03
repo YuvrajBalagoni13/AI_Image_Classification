@@ -11,6 +11,7 @@ model_name = "efficientnet_b0"
 num_classes = 2
 layer_name = "classifier"
 
+# data_URL = "https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images"
 data_URL = "https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images"
 train_dir, test_dir = download_data.download_data(data_URL)
 
