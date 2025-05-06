@@ -1,12 +1,12 @@
 venv/
 data/
 wandb/
-wandb-debug.log
+wandb-debug.log/
 artifacts/
 logs/
 cifake-real-and-ai-generated-synthetic-images/
 pytorch-grad-cam/
 LLaVA/
 LLaVA-NeXT/
-dataset/
 Models/
+dataset/

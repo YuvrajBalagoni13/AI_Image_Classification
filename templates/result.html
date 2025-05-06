@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Results</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 32px 8px;
+            text-align: center;
+        }
+        h1 {
+            color: #3b2f63;
+            margin-bottom: 16px;
+            font-size: 2.3rem;
+        }
+        .result-container {
+            margin: 32px auto;
+            padding: 32px 16px;
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 8px 32px rgba(60,60,120,0.09);
+            transition: box-shadow 0.3s;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin: 28px 0 18px 0;
+        }
+        .image-box {
+            background: #f1f5ff;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(60,60,120,0.08);
+            padding: 16px;
+            min-width: 220px;
+        }
+        .image-box h3 {
+            color: #6366f1;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+        .image-box img {
+            max-width: 220px;
+            max-height: 220px;
+            border-radius: 7px;
+            border: 1.5px solid #a5b4fc;
+            background: #fff;
+        }
+        .prediction {
+            margin: 20px 0 6px 0;
+            font-size: 1.2em;
+            color: #3b2f63;
+            font-weight: 600;
+        }
+        .confidence {
+            margin: 0 0 14px 0;
+            font-size: 1em;
+            color: #6366f1;
+            font-weight: 500;
+        }
+        .back-btn {
+            background-color: #6366f1;
+            color: white;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 12px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .back-btn:hover {
+            background-color: #4338ca;
+            box-shadow: 0 4px 16px rgba(60,60,120,0.10);
+        }
+    </style>
+</head>
+<body>
+    <h1>Classification Results</h1>
+    <div class="result-container">
+        <div class="image-container">
+            <div class="image-box">
+                <h3>Original Image</h3>
+                <img src="{{ original_image }}" alt="Original Image">
+            </div>
+            <div class="image-box">
+                <h3>GradCAM Visualization</h3>
+                <img src="{{ overlay_image }}" alt="GradCAM Overlay">
+            </div>
+        </div>
+        <div class="prediction">
+            Prediction: {{ prediction }}
+        </div>
+        <a href="{{ url_for('predict') }}" class="back-btn">Classify Another Image</a>
+    </div>
+</body>
+</html>

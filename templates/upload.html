@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification with GradCAM</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 32px 8px;
+            text-align: center;
+        }
+        h1 {
+            color: #3b2f63;
+            margin-bottom: 16px;
+            font-size: 2.3rem;
+        }
+        .upload-form {
+            margin: 32px auto;
+            padding: 32px 16px;
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 8px 32px rgba(60,60,120,0.09);
+            transition: box-shadow 0.3s;
+        }
+        .drop-area {
+            width: 92.5%;
+            min-height: 180px;
+            padding: 24px;
+            border: 2.5px dashed #a5b4fc;
+            border-radius: 10px;
+            background: #f1f5ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: border-color 0.3s, background 0.3s;
+            margin-bottom: 18px;
+        }
+        .drop-area.highlight {
+            border-color: #6366f1;
+            background: #e0e7ff;
+        }
+        .upload-icon {
+            font-size: 48px;
+            color: #6366f1;
+            margin-bottom: 10px;
+        }
+        .drop-area p {
+            margin: 0 0 6px 0;
+            color: #555;
+        }
+        .browse-text {
+            color: #6366f1;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .file-input {
+            display: none;
+        }
+        .preview-container {
+            margin-top: 12px;
+            display: none;
+        }
+        .preview-image {
+            width: 180px;
+            height: auto;
+            border-radius: 7px;
+            box-shadow: 0 4px 16px rgba(60,60,120,0.08);
+        }
+        .submit-btn {
+            background-color: #6366f1;
+            color: white;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 18px;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .submit-btn:hover {
+            background-color: #4338ca;
+            box-shadow: 0 4px 16px rgba(60,60,120,0.10);
+        }
+    </style>
+</head>
+<body>
+    <h1>AI Generated Image Classification with GradCAM Visualization</h1>
+    <div class="upload-form">
+        <h2 style="color:#6366f1;margin-bottom:12px;">Upload an Image</h2>
+        <form method="POST" enctype="multipart/form-data" action="/" id="upload-form">
+            <div class="drop-area" id="drop-area">
+                <div class="upload-icon">📷</div>
+                <p>Drag and drop your image here</p>
+                <p>or <span class="browse-text" id="browse-files">Browse files</span></p>
+                <p style="font-size:0.95em;color:#888;">Supported: JPG, JPEG, PNG</p>
+            </div>
+            <input type="file" name="file" id="file-input" class="file-input" accept=".png, .jpg, .jpeg" required>
+            <div class="preview-container" id="preview-container">
+                <img src="" alt="Image preview" class="preview-image" id="preview-image">
+                <p id="file-name" style="color:#6366f1;font-size:1em;margin-top:8px;"></p>
+            </div>
+            <button type="submit" class="submit-btn">Classify Image</button>
+        </form>
+    </div>
+    <script>
+        const dropArea = document.getElementById('drop-area');
+        const fileInput = document.getElementById('file-input');
+        const previewContainer = document.getElementById('preview-container');
+        const previewImage = document.getElementById('preview-image');
+        const fileName = document.getElementById('file-name');
+        const browseFiles = document.getElementById('browse-files');
+
+        // Prevent default drag behaviors
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, e => {
+                e.preventDefault();
+                e.stopPropagation();
+            }, false);
+        });
+
+        // Highlight drop area
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, () => dropArea.classList.add('highlight'), false);
+        });
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, () => dropArea.classList.remove('highlight'), false);
+        });
+
+        // Handle dropped files
+        dropArea.addEventListener('drop', e => {
+            const files = e.dataTransfer.files;
+            if (files.length) {
+                fileInput.files = files;
+                handleFiles(files[0]);
+            }
+        });
+
+        // Handle file selection
+        fileInput.addEventListener('change', function() {
+            if (this.files.length) {
+                handleFiles(this.files[0]);
+            }
+        });
+
+        function handleFiles(file) {
+            const validTypes = ['image/jpeg', 'image/jpg', 'image/png'];
+            if (!validTypes.includes(file.type)) {
+                alert('Please select a valid image file (JPG, JPEG, PNG)');
+                fileInput.value = '';
+                previewContainer.style.display = 'none';
+                return;
+            }
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                previewImage.src = e.target.result;
+                fileName.textContent = file.name;
+                previewContainer.style.display = 'block';
+            }
+            reader.readAsDataURL(file);
+        }
+
+        // Make browse text clickable
+        browseFiles.addEventListener('click', function(e) {
+            fileInput.click();
+        });
+
+        // Make drop area clickable
+        dropArea.addEventListener('click', function(e) {
+            if (e.target !== browseFiles) {
+                fileInput.click();
+            }
+        });
+    </script>
+</body>
+</html>
+
