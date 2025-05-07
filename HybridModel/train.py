@@ -13,6 +13,18 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 with wandb.init(project="AI_gen", 
                 settings=wandb.Settings(symlink=False, start_method="thread",_disable_meta=True)) as run:
     
+    run.config.attn_dropout = 0.1
+    run.config.batch_size = 50
+    run.config.embedding_dropout = 0
+    run.config.epochs = 50
+    run.config.lr = 0.0001
+    run.config.mlp_dropout = 0
+    run.config.mlp_size = 2048
+    run.config.num_transformer = 5
+    run.config.percentage_data = 100
+    run.config.test_aug = "No_Augmentation"
+    run.config.train_aug = "Gaussian_Blur"
+
     config = run.config
     preprocess = datapreprocess.DataPreprocessor(train_dir= train_dir,
                                                 test_dir= test_dir)
