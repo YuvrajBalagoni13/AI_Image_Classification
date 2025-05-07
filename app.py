@@ -42,17 +42,17 @@ def predict():
             output, confidence = inference.inference(image=img)
             
             # Generate overlay heatmap
-            overlay_img = overlay.Overlay_heatmap(img)
-            overlay_hm_img = Image.fromarray(overlay_img, 'RGB')
+            # overlay_img = overlay.Overlay_heatmap(img)
+            # overlay_hm_img = Image.fromarray(overlay_img, 'RGB')
             
             # Save overlay image
-            overlay_filename = f"overlay_{filename}"
-            overlay_save_path = os.path.join(app.config['UPLOAD_FOLDER'], overlay_filename)
-            overlay_hm_img.save(overlay_save_path)
+            # overlay_filename = f"overlay_{filename}"
+            # overlay_save_path = os.path.join(app.config['UPLOAD_FOLDER'], overlay_filename)
+            # overlay_hm_img.save(overlay_save_path)
 
             return render_template('result.html', 
                                 original_image=url_for('static', filename=f"uploads/{filename}"),
-                                overlay_image=url_for('static', filename=f"uploads/{overlay_filename}"),
+                                # overlay_image=url_for('static', filename=f"uploads/{overlay_filename}"),
                                 prediction=output,
                                 confidence=f"{confidence:.2f}%")
         

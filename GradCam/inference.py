@@ -4,14 +4,14 @@ import torchvision
 from torchvision import transforms
 import numpy as np
 
-def inference(model_path : str = "Models/trainedmodel.onnx",
+def inference(model_path : str = "Models/Modelshybridmodel.onnx",
               image : torch.Tensor = None,
               device : torch.device = None) -> {str , int}:
     
     class_names = ["FAKE", "REAL"]
 
     transform = transforms.Compose([
-        transforms.Resize((224,224)),
+        transforms.Resize((32,32)),
         transforms.ToTensor(),
         transforms.Normalize(mean=[0.485, 0.456, 0.406],
                             std=[0.229, 0.224, 0.225])
