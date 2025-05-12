@@ -4,7 +4,7 @@ import torchvision
 from torchvision import transforms
 import numpy as np
 
-def inference(model_path : str = "Models/Modelshybridmodel.onnx",
+def inference(model_path : str = "Models/finalmodel.onnx",
               image : torch.Tensor = None,
               device : torch.device = None) -> {str , int}:
     

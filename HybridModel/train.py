@@ -116,7 +116,8 @@ with wandb.init(project="AI_gen",
         test_loss /= len(test_dataloader)
         test_acc /= len(test_dataloader)
 
-        lrs.append(optimizer.param_groups[0]["lr"])
+        curr_lr = optimizer.param_groups[0]["lr"]
+        lrs.append(curr_lr)
         scheduler.step(test_loss)
       
       results["train loss"].append(train_loss.item() if isinstance(train_loss, torch.Tensor) else train_loss)
@@ -133,7 +134,7 @@ with wandb.init(project="AI_gen",
               "test_accuracy" : test_acc,
           })
       
-      print(f"Epoch {epoch + 1}/{config.epochs} & LR {config.lr}: train loss: {train_loss:.4f} |\ntrain accuracy: {train_acc:.4f} |\ntest loss: {test_loss:.4f} |\ntest accuracy: {test_acc:.4f}")
+      print(f"Epoch {epoch + 1}/{config.epochs} & LR {curr_lr}: train loss: {train_loss:.4f} |\ntrain accuracy: {train_acc:.4f} |\ntest loss: {test_loss:.4f} |\ntest accuracy: {test_acc:.4f}")
 
       model_path = Path("Models/")
       if model_path.is_dir() == False :
