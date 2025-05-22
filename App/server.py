@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, send_from_directory, redirect, url_for
-from GradCam import inference, overlay
+from GradCam import inference
 import numpy as np
 from werkzeug.utils import secure_filename
 from PIL import Image
@@ -59,4 +59,4 @@ def predict():
     return render_template('upload.html')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port= 5000)
