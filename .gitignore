@@ -8,7 +8,7 @@ cifake-real-and-ai-generated-synthetic-images/
 pytorch-grad-cam/
 LLaVA/
 LLaVA-NeXT/
-Models/
+OtherModels/
 dataset/
 testing.ipynb/
 hybridmodel.ipynb/
