@@ -30,7 +30,12 @@ git clone https://github.com/YuvrajBalagoni13/AI_Image_Classification.git
 cd AI_Image_Classification
 ```
 
-2. Run this:
+2. Run this for training CNN model:
 ```bash
-python Scripts\sweep_runner.py 
+python Scripts/sweep_runner.py 
+```
+
+Run this for CNN + Vision Transformer model:
+```bash
+python HybridModel/sweep_runner.py
 ```
